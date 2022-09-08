@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Shadows Into Light', 'cursive'],
+        main: ['Common Pixel', 'sans-serif'],
       }, //end of fontFamily
     },
   },
