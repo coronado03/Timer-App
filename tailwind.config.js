@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Amatic SC', 'cursive'],
+        main: ['Common Pixel', 'sans-serif'],
+        logo: ['Oswald', 'sans-serif'],
       }, //end of fontFamily
     },
   },
