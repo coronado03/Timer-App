@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Common Pixel', 'sans-serif'],
+        main: ['Amatic SC', 'cursive'],
       }, //end of fontFamily
     },
   },

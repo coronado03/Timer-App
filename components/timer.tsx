@@ -38,10 +38,10 @@ export default function Timer() {
         <>
         
           <div className="grid grid-cols-4 h-screen justify-items-center place-content-center gap-x-px	text-8xl text-white">        
-              <h1>{days}</h1>
-              <h1>{hours}</h1>
-              <h1>{minutes}</h1>
-              <h1>{seconds}</h1>
+              <h1 className="font-bold">{days}</h1>
+              <h1 className="font-bold">{hours}</h1>
+              <h1 className="font-bold">{minutes}</h1>
+              <h1 className="font-bold">{seconds}</h1>
 
               <h4 className="text-sm">Days</h4>    
               <h4 className="text-sm">Hours</h4>  
