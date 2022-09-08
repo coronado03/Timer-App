@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Timer from '../components/timer'
 import Footer from '../components/footer'
-import Navbar from '../components/navbar'
 
 const Home: NextPage = () => {
   return (
