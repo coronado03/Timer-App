@@ -36,17 +36,22 @@ export default function Timer() {
 
       return(
         <>
-        
-          <div className="grid grid-cols-4 h-screen justify-items-center place-content-center gap-x-px text-5xl	md:text-8xl text-white">        
+
+          
+          <div className="grid grid-cols-4 h-screen lg:mx-10 justify-items-center place-content-center gap-x-px gap-y-px text-5xl	md:text-8xl text-white">        
+              <h1 className='col-span-4 mb-14 text-3xl md:text-4xl text-yellow-400'>{`思い出はいらない`}</h1>
+              
+              <h1 className="font-bold">{days}</h1>
+              <h1 className="font-bold">{hours}</h1>
+              <h1 className="font-bold">{minutes}</h1>
+              <h1 className="font-bold ">{seconds}</h1>
+              
               <h4 className="text-base">Days</h4>    
               <h4 className="text-base">Hours</h4>  
               <h4 className="text-base">Minutes</h4>  
               <h4 className="text-base">Seconds</h4>   
 
-              <h1 className="font-bold">{days}</h1>
-              <h1 className="font-bold">{hours}</h1>
-              <h1 className="font-bold">{minutes}</h1>
-              <h1 className="font-bold">{seconds}</h1>
+
 
 
           </div>

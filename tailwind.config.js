@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Common Pixel', 'sans-serif'],
-        logo: ['Oswald', 'sans-serif'],
+        main: ['Caveat', 'cursive'],
       }, //end of fontFamily
     },
   },
