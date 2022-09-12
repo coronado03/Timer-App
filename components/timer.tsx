@@ -34,17 +34,33 @@ export default function Timer() {
         return () => clearInterval(interval);
       }, []);
 
+
+      function useHover() {
+        const [hovering, setHovering] = useState(false)
+        const onHoverProps = {
+          onMouseEnter: () => setHovering(true),
+          onMouseLeave: () => setHovering(false),
+        }
+        return [hovering, onHoverProps]
+      }
+
+      const [memoryHovering, memoryHoveringProps] = useHover()
+
+
       return(
         <>
 
           
           <div className="grid grid-cols-4 h-screen lg:mx-10 justify-items-center place-content-center gap-x-px gap-y-px text-5xl	md:text-8xl text-white">        
-              <h1 className='col-span-4 mb-14 text-3xl md:text-4xl text-yellow-400'>{`思い出はいらない`}</h1>
+              <h1 {...memoryHoveringProps} className='transition duration-300 ease-in-out hover:text-3xl hover:text-fuchsia-500	 col-span-4 mb-14 text-3xl md:text-4xl text-yellow-400'>
+
+              {memoryHovering ? "if we keep holding onto yesterday, what are we going to be tomorrow?" : "思い出はいらない"}
+              </h1>
               
-              <h1 className="font-bold">{days}</h1>
-              <h1 className="font-bold">{hours}</h1>
-              <h1 className="font-bold">{minutes}</h1>
-              <h1 className="font-bold ">{seconds}</h1>
+              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{days}</h1>
+              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{hours}</h1>
+              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{minutes}</h1>
+              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{seconds}</h1>
               
               <h4 className="text-base">Days</h4>    
               <h4 className="text-base">Hours</h4>  
