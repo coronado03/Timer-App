@@ -52,7 +52,7 @@ export default function Timer() {
 
           
           <div className="grid grid-cols-4 h-screen lg:mx-10 justify-items-center place-content-center gap-x-px gap-y-px text-5xl	md:text-8xl text-white">        
-              <h1 {...memoryHoveringProps} className='transition duration-300 ease-in-out hover:text-3xl hover:text-fuchsia-500	 col-span-4 mb-14 text-3xl md:text-4xl text-yellow-400'>
+              <h1 {...(memoryHoveringProps as object)} className='transition duration-300 ease-in-out hover:text-3xl hover:text-fuchsia-500	 col-span-4 mb-14 text-3xl md:text-4xl text-yellow-400'>
 
               {memoryHovering ? "if we keep holding onto yesterday, what are we going to be tomorrow?" : "思い出はいらない"}
               </h1>
