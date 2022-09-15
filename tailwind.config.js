@@ -5,8 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      color:{
+        'primary': ''
+      },
+
       fontFamily: {
-        main: ['Caveat', 'cursive'],
+        
       }, //end of fontFamily
     },
   },

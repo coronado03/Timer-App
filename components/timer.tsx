@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 
 export default function Timer() {
 
-    const [days, setDays] = useState(0);
-    const [hours, setHours] = useState(0);
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(0);
+    const [days, setDays] = useState('0'); 
+    const [hours, setHours] = useState('0');
+    const [minutes, setMinutes] = useState('0');
+    const [seconds, setSeconds] = useState('0');
 
     useEffect(() => {
         const target = new Date("09/27/2022 4:00:0");
@@ -16,18 +16,22 @@ export default function Timer() {
           const difference = target.getTime() - now.getTime();
     
           const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-          setDays(d);
+          const da = String(d).padStart(2, '0');
+          setDays(da);
     
           const h = Math.floor(
             (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
           );
-          setHours(h);
+          const ha = String(h).padStart(2, '0');
+          setHours(ha);
     
           const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-          setMinutes(m);
+          const mi = String(m).padStart(2, '0');
+          setMinutes(mi);
     
           const s = Math.floor((difference % (1000 * 60)) / 1000);
-          setSeconds(s);
+          const se = String(s).padStart(2, '0');
+          setSeconds(se);
     
         }, 1000);
     
@@ -49,23 +53,24 @@ export default function Timer() {
 
       return(
         <>
+          <div className="flex flex-col items-center justify-center">
 
-          
-          <div className="grid grid-cols-4 h-screen lg:mx-10 justify-items-center place-content-center gap-x-px gap-y-px text-5xl	md:text-8xl text-white">        
-              <h1 {...(memoryHoveringProps as object)} className='transition duration-300 ease-in-out hover:text-3xl hover:text-fuchsia-500	 col-span-4 mb-14 text-3xl md:text-4xl text-yellow-400'>
+            <div className="flex">
+              <h1 className="text-9xl text-white">{days}</h1>
+              <p className="self-center mt-5	ml-[-25px] text-rose-600">Days</p>
+            </div>
+            <div className="flex">
+              <h1 className="text-8xl text-white">{hours}</h1>
+              <p className="self-end mb-4 text-grey ml-[-25px] text-rose-600">Hours</p>
+            </div>
+            <div className="flex gap-4 text-4xl text-white">
+              <h1>{minutes}</h1>
+              <h1>{seconds}</h1>
+            </div>
 
-              {memoryHovering ? "if we keep holding onto yesterday, what are we going to be tomorrow?" : "思い出はいらない"}
-              </h1>
-              
-              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{days}</h1>
-              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{hours}</h1>
-              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{minutes}</h1>
-              <h1 className="font-bold hover:text-rose-500	transition duration-500 ease-in-out">{seconds}</h1>
-              
-              <h4 className="text-base">Days</h4>    
-              <h4 className="text-base">Hours</h4>  
-              <h4 className="text-base">Minutes</h4>  
-              <h4 className="text-base">Seconds</h4>   
+            <div className="text-rose-600">
+              <p>minutes & seconds</p>
+            </div>
 
 
 
