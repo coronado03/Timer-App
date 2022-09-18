@@ -53,23 +53,23 @@ export default function Timer() {
 
       return(
         <>
-          <div className="flex flex-col items-center justify-center">
+          <div className="group flex flex-col items-center mr-10 place-self-end md:place-self-center md:mr-0 md:ml-12 md:row-span-2 md:row-start-1 md:row-end-3 md:col-start-1 md:mb-20">
 
-            <div className="flex">
-              <h1 className="text-9xl text-white">{days}</h1>
-              <p className="self-center mt-5	ml-[-25px] text-rose-600">Days</p>
+            <div className="flex mb-[-19px]">
+              <h1 className="text-9xl md:text-[9rem] lg:text-[11rem] xl:text-[13rem] text-white group-hover:text-red-500 transition ease-in-out">{days}</h1>
+              <p className="self-center mt-5 text-[43px] ml-[-35px] group-hover:translate-x-6 text-white outline-text transition ease-in-out">days</p>
             </div>
-            <div className="flex">
-              <h1 className="text-8xl text-white">{hours}</h1>
-              <p className="self-end mb-4 text-grey ml-[-25px] text-rose-600">Hours</p>
+            <div className="flex mb-[-25px]">
+              <h1 className="text-8xl md:text-[7rem] lg:text-[8rem] xl:text-[10rem] text-white group-hover:text-red-500 transition ease-in-out">{hours}</h1>
+              <p className="self-end mb-4 text-[43px] mt-9 text-grey ml-[-45px] group-hover:translate-x-6 text-white outline-text transition ease-in-out">hours</p>
             </div>
-            <div className="flex gap-4 text-4xl text-white">
-              <h1>{minutes}</h1>
-              <h1>{seconds}</h1>
+            <div className="flex gap-4 mr-14 text-4xl md:text-[2.8rem] lg:text-[3.4rem] xl:text-[3.8rem] md:mt-5 lg:mt-7 text-white">
+              <h1 className="group-hover:text-red-500 transition ease-in-out">{minutes}</h1>
+              <h1 className="group-hover:text-red-500 transition ease-in-out">{seconds}</h1>
             </div>
 
-            <div className="text-rose-600">
-              <p>minutes & seconds</p>
+            <div className="text-white">
+              <p className="text-xs lg:mt-2 group-hover:translate-x-6 transition ease-in-out">minutes & seconds</p>
             </div>
 
 

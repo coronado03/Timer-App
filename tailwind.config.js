@@ -10,6 +10,7 @@ module.exports = {
       },
 
       fontFamily: {
+        secondary: ["SECONDARY", 'sans-serif'],
         
       }, //end of fontFamily
     },
