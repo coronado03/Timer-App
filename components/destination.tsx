@@ -13,12 +13,12 @@ return(
 
       <div className="flex flex-row gap-x-12 md:gap-x-8 lg:gap-x-16 xl:mr-3">
         <div className="flex flex-col">
-          <h4 className="rounded-full border md:text-xl lg:text-2xl xl:text-3xl border-white pl-3 pr-8 md:pr-12 group-hover:border-[#CC1C1C]">Honduras</h4>
+          <h4 className="rounded-full border md:text-xl lg:text-2xl xl:text-3xl border-white pl-3 pr-8 md:pr-12 group-hover:border-[#CC1C1C]">Poland</h4>
           <p className="text-[0.6rem] ml-1 mt-1">Departure</p>
         </div>
 
         <div className="flex flex-col">
-          <h4 className="rounded-full border md:text-xl lg:text-2xl xl:text-3xl border-white pl-3 pr-8 md:pr-12 group-hover:border-[#CC1C1C]">Polonia</h4>
+          <h4 className="rounded-full border md:text-xl lg:text-2xl xl:text-3xl border-white pl-3 pr-8 md:pr-12 group-hover:border-[#CC1C1C]">Honduras</h4>
           <p className="text-[0.6rem] ml-1 mt-1">Arrival</p>
         </div>
 
